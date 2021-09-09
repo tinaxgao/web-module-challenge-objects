@@ -28,7 +28,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log(createMenuItem(`Spinach Salad`, 9, `Salads`));
+console.log(createMenuItem(`Impossible Burger`, 12, `Sandwiches`));
+console.log(createMenuItem(`Chocolate Cake`, 6, `Desserts`));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -47,9 +49,11 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(type){
+    if (type==='student' || type === 'teacher') {return this.price * .75}
+    else {return this.price * .9};
+  }
 }
-
 
 
 ///////////////Reviews (MVP)///////////////////
