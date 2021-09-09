@@ -51,7 +51,8 @@ const burger = {
   category: "Lunch", 
   discount: function(type){
     if (type==='student' || type === 'teacher') {return this.price * .75}
-    else {return this.price * .9};
+    else if (type==='public') {return this.price * .9}
+    else {return this.price}
   }
 }
 
@@ -72,7 +73,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5].feedback);
 
 
 
@@ -96,8 +97,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback});
+  return array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
